@@ -1,0 +1,87 @@
+// main: ../style.less
+
+.footer {
+    padding: 1rem 0;
+    background-color: @black;
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer__credits {
+    display: flex;
+    align-items: center;
+    @media @tablet-portret {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    @media @mobile {
+        flex-direction: column;
+    }
+}
+
+.footer__copyright {
+    padding-right: 0.8rem; // отступ до бордера
+    margin-right: 1rem; // отступ после бордера
+    font-size: 0.94rem;
+    color: #BBBBCC;
+    border-right: 1px solid fade(@gray,35%);
+    @media @mobile {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        border-right: 0;
+    }
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    a {
+        margin-right: 1.2rem;
+        text-decoration: none;
+        @media @tablet-portret {
+            margin: 0 .5rem;
+        }
+    }
+}
+
+.footer__nav {
+    display: flex;
+    align-items: center;
+    font-size: .94rem;
+    @media @tablet-portret {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.footer__nav-link {
+    margin-left: 1.5rem;
+    color: #BBBBCC;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+    &--btn {
+        border: 1px solid @light-gray;
+        border-radius: 20px;
+        padding: .5rem 1.4rem;
+        line-height: 1.1;
+        transition: background-color .2s linear, border-color .2s linear, color .2s linear;
+
+        &:hover {
+            text-decoration: none;
+            background-color: #BBBBCC;
+            color: @black;
+            border-color: #BBBBCC;
+        }
+    }
+    @media @tablet-portret {
+        margin: 0 .5rem .5rem;
+    }
+}

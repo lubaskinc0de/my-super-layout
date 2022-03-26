@@ -1,0 +1,62 @@
+// main: ../style.less
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap; // разрешаем переносить на новую строку
+    margin: 0 -1rem 2.8rem; // компенсируем паддинги что бы элементы портфолио начинались с начала нашего контейнера (мы их сдвинули паддингом вот и компенсируем)  и добавляем отступ снизу
+}
+
+.portfolio__col {
+    width: 33.33333%;
+    padding: 1rem;
+    @media @tablet {
+        width: 50%;
+    }
+    @media @mobile {
+        width: 100%;
+    }
+}
+
+.portfolio__item {
+    // тень
+    box-shadow: 0 0 4px fade(#000, 25%);
+    border-radius: 10px;
+    overflow: hidden; // обрезаем вылезающую картинку
+    transition: box-shadow .2s linear;
+    &:hover {
+        box-shadow: 0 0 25px fade(#000,25%);
+    }
+    @media @tablet {
+        max-width: 370px;
+    }
+    @media @mobile {
+        margin: 0 auto;
+    }
+}
+
+.portfolio__item-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    // адаптивная картинка
+}
+
+.portfolio__item-content {
+    padding: 1rem 0.8rem;
+}
+.portfolio__item-cat {
+    font-size: 12px;
+    color: @black;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio__item-title {
+    display: flex;
+    justify-content: space-between; // двигаем дату в другой край контейнера title
+    position: relative;
+    font-weight: 700;
+    font-size: 1.06rem;
+    text-transform: uppercase;
+    color: @black;
+}
