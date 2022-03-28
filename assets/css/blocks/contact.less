@@ -1,0 +1,65 @@
+// main: ../style.less
+
+.contact {
+    display: flex;
+}
+
+.contact__left {
+    width: 47%;
+    padding: 2rem;
+    @media @mobile {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+}
+
+.contact__right {
+    width: 53%;
+    background: @gray url(http://place-hold.it/480x700) center no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    @media @mobile {
+        display: none;
+    }
+}
+
+.contact__info {
+    margin: 2rem 0 3rem;
+    padding: 0;
+    list-style: none;
+    font-size: .94rem;
+    color: @black;
+    font-weight: 300;
+    @media @tablet {
+        font-size: .85rem;
+    }
+    @media @mobile {
+        margin: 1rem 0 1.5rem;
+        font-size: .75rem;
+    }
+}
+
+.contact__info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: .7rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.contact__info-icon {
+    margin-right: .5rem;
+    &--first {
+        width: 15px;
+        height: 17px;
+    }
+    &--second {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+.form__group {
+    margin-bottom: 1.5rem;
+}
